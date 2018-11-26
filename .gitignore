@@ -8,10 +8,7 @@ lib-cov
 *.gz
 *.swp
 
-pids
-logs
-results
-tmp
+
 
 # Loggs
 .log
@@ -33,7 +30,7 @@ public/js/lib/popper.min*
 
 # Dependency directory
 node_modules
-bower_components
+
 
 # Editors
 .idea
