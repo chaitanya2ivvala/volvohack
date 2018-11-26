@@ -1,0 +1,33 @@
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+
+
+
+# Read image
+im = cv2.imread('../../1.jpg', cv2.IMREAD_GRAYSCALE)
+ gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+ret, thresh = cv2.threshold(gray,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
+# Set up the detector with default parameters.
+detector = cv2.SimpleBlobDetector()
+ 
+# Detect blobs.
+keypoints = detector.detect(im)
+ 
+# Draw detected blobs as red circles.
+# cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS ensures the size of the circle corresponds to the size of blob
+im_with_keypoints = cv2.drawKeypoints(im, keypoints, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+ cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+# Show keypoints
+cv2.imshow("Keypoints", im_with_keypoints)
+cv2.waitKey(0)
+
+(439, 187)
+(577, 187)
+(759, 187)
+(856, 187)
+(441, 668)
+(1805, 668)
+(1821,668)
+(1823, 1054)
+(1806, 1054)

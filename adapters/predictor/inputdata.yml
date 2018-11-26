@@ -1,0 +1,10 @@
+model: inputdatamodel
+attributes: 
+  component: STRING
+data:
+  imageID: STRING 
+  geometry:
+    type1: NUMBER
+    type2: NUMBER
+    type3: NUMBER
+  

@@ -1,0 +1,10 @@
+model: outputdatamodel
+attributes: 
+  component: STRING
+data:
+  imageID: STRING 
+  result:
+    parameter1: NUMBER
+    parameter2: NUMBER
+  message: STRING
+  
